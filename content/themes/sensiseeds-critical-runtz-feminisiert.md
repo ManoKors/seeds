@@ -1,7 +1,7 @@
 ---
 title: Critical Runtz
-download: https://www.wrappixel.com/templates/flexy-nextjs-dashboard-material-ui/?ref=317
-price: 4.23
+download: https://sensiseeds.com/de/research/critical-runtz-feminisiert
+price: 6.50
 demo: https://sensiseeds.com/de/research/critical-runtz-feminisiert
 author: Sensi Seeds
 author_link: https://www.wrappixel.com/
@@ -23,6 +23,10 @@ home_weight: 5
 
 
 ---
+
+## Genetik
+
+NL#2 x Skunk Kush x Jack Herer x Durban
 
 ## Key Features
 
