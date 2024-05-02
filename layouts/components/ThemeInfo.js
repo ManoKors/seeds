@@ -59,7 +59,7 @@ const ThemeInfo = ({ theme, slug }) => {
       </div>
 
       <div className="widget widget-info mb-3 mt-12">
-        <h3 className="h4 mb-3 font-light">Theme Information:</h3>
+        <h3 className="h4 mb-3 font-light">Sorten Information:</h3>
         {github_star > 0 && (
           <div className="flex items-center py-[6px]">
             <span className="min-w-[120px]">Stars : </span>
@@ -146,7 +146,7 @@ const ThemeInfo = ({ theme, slug }) => {
           />
 
           <div>
-            <span className="mb-[2px] block text-sm">Created by</span>
+            <span className="mb-[2px] block text-sm">Breeder:</span>
             <Link
               href={
                 author_link
