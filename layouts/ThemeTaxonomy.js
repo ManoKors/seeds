@@ -100,7 +100,7 @@ const ThemeTaxonomy = ({ data, currentPage, showIntro, authors }) => {
               )}
 
               {language && (
-                <li title="Language">
+                <li title="Sprache">
                   <TbCode />
                   {language}
                 </li>
