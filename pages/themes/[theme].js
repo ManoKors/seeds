@@ -82,7 +82,7 @@ const SingleTheme = ({ slug, theme }) => {
           </div>
           {similarProducts.length > 0 && (
             <div className="mt-24">
-              <h2 className="mb-8 text-center">Ähnliche Sorten wie (title)</h2>
+              <h2 className="mb-8 text-center">Ähnliche Sorten wie {title}</h2>
               <Themes
                 className="sm:row-cols-2 lg:row-cols-4 justify-center"
                 themes={similarProducts.slice(0, 4)}
