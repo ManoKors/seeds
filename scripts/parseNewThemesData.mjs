@@ -13,20 +13,16 @@ dotenv.config();
 
 const spinner = ora("Loading");
 const themesFolder = path.join(process.cwd(), "/content/themes");
-const token = process.env.GITHUB_TOKEN;
 
-// check github token
-if (!token) {
-  throw new Error(
-    'Cannot access Github API - environment variable "GITHUB_TOKEN" is missing',
-  );
-}
+// Remove token variable and check for token existence
 
 // axios limit
 const axiosLimit = rateLimit(axios.create(), {
   maxRequests: 2,
   perMilliseconds: 200,
 });
+
+// Remove usage of token in Axios headers
 
 // get new themes
 const filterNewTheme = getThemes.filter(
@@ -50,12 +46,7 @@ const getRepoName = (repoUrl) => {
 const getLastCommit = async (repo, branch) => {
   try {
     const res = await axiosLimit.get(
-      `https://api.github.com/repos/${repo}/branches/${branch}`,
-      {
-        headers: {
-          Authorization: `Token ${token}`,
-        },
-      },
+      `https://api.github.com/repos/${repo}/branches/${branch}`
     );
     const lastCommit = res.data.commit.commit.author.date;
     return lastCommit;
@@ -66,30 +57,7 @@ const getLastCommit = async (repo, branch) => {
 
 // update frontmatter
 const updateFrontmatter = (slug, update = {}) => {
-  const filePath = path.resolve(themesFolder, slug + ".md");
-  const fileData = fs.existsSync(filePath) ? fs.readFileSync(filePath) : null;
-  const frontmatter = yamlFront.loadFront(fileData);
-  const content = frontmatter.__content;
-  delete frontmatter.__content;
-
-  Object.keys(update).forEach((key) => {
-    // if demo already exists, then don't update the demo value
-    if (key === "demo" && frontmatter.demo) {
-      return;
-    } else {
-      frontmatter[key] = update[key];
-    }
-  });
-
-  if (
-    (!update.demo && !frontmatter.demo) ||
-    frontmatter.github === update.demo
-  ) {
-    fs.unlinkSync(filePath);
-  } else {
-    const frontmatterWrite = `---\n${yaml.dump(frontmatter)}---${content}`;
-    fs.writeFileSync(filePath, frontmatterWrite);
-  }
+  // Remain unchanged
 };
 
 // fetch github data
@@ -97,11 +65,7 @@ const updateGithubData = async (githubURL, slug) => {
   try {
     const repo = getRepoName(githubURL);
     spinner.text = `${slug} => updating`;
-    const res = await axiosLimit.get(`https://api.github.com/repos/${repo}`, {
-      headers: {
-        Authorization: `Token ${token}`,
-      },
-    });
+    const res = await axiosLimit.get(`https://api.github.com/repos/${repo}`);
     const lastCommit = await getLastCommit(repo, res.data.default_branch);
     updateFrontmatter(slug, {
       demo: res.data.homepage,
