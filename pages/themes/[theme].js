@@ -53,7 +53,7 @@ const SingleTheme = ({ slug, theme }) => {
               {markdownify(content, "div", "content")}
               <div className="mt-8 hidden border-y border-gray-300 py-5 dark:border-darkmode-border lg:block">
                 <div className="flex flex-wrap items-center">
-                  <h3 className="h6 mb-1 mr-5">Share This Theme:</h3>
+                  <h3 className="h6 mb-1 mr-5">Teile diese Sorte:</h3>
                   <Share
                     className="space-x-4"
                     title={title}
