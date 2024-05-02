@@ -1,8 +1,8 @@
 ---
-title: Flexy NextJs Dashboard – MUI (App Directory)
+title: 420 Punch
 download: https://www.wrappixel.com/templates/flexy-nextjs-dashboard-material-ui/?ref=317
-price: 49
-demo: https://flexy-next-js-dashboard.vercel.app/
+price: 4.23
+demo: https://sensiseed.com/hanfsamen/420-punch-feminisierte-hanfsamen/
 author: WrapPixel
 author_link: https://www.wrappixel.com/
 date: 2023-02-13T00:00:00.000Z
