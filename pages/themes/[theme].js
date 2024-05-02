@@ -112,7 +112,7 @@ const SingleTheme = ({ slug, theme }) => {
             "offers": {
               "@type": "Offer",
               "price": "${price ? price : 0}",  
-              "priceCurrency": "USD"  
+              "priceCurrency": "EUR"  
             },
             "additionalProperty": [
               {
