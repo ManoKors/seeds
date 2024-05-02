@@ -101,8 +101,7 @@ const CookieConsent = () => {
             />
           </span>
           <p>
-            This website use cookies. By using this website, you automatically
-            accept that.
+            Diese Webseite benutzt Cookies. Mit der Nutzung dieser Seite wird dies automatisch akzeptiert.
             <button
               className="cookie-box-closer mt-2 block"
               onClick={cookieHandler}

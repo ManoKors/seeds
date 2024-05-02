@@ -92,13 +92,13 @@ const ThemeInfo = ({ theme, slug }) => {
         )}
         {price > 0 && (
           <div className="flex items-center py-[6px]">
-            <span className="min-w-[120px]">Price : </span>
+            <span className="min-w-[120px]">Preis : </span>
             <span className="text-dark dark:text-white">${price}</span>
           </div>
         )}
         {!github && price === 0 && (
           <div className="flex items-center py-[6px]">
-            <span className="min-w-[120px]">Price : </span>
+            <span className="min-w-[120px]">Preis : </span>
             <span className="text-dark dark:text-white">Free</span>
           </div>
         )}
