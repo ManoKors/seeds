@@ -1,8 +1,8 @@
 ---
-title: Voxo
+title: Joanne's CBD
 download: https://1.envato.market/Qyy9Dz
 price: 19
-demo: https://voxo.vercel.app/
+demo: https://www.royalqueenseeds.de/cbd-samen/483-joanne-s-cbd.html
 author: PixelStrap
 author_link: https://themeforest.net/user/pixelstrap
 date: 2023-04-17T00:00:00.000Z
