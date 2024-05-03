@@ -16,7 +16,6 @@ cms:
   - CBD
 category:
   - Saas
-  - CBD
 draft: false
 weight: 6
 home_weight: 5
