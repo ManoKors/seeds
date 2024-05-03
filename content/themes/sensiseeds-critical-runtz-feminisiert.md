@@ -13,7 +13,7 @@ ssg:
 css:
   - MUI
 cms:
-  - CBD
+  -
 category:
   - Saas
 draft: false
