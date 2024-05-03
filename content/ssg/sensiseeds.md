@@ -4,7 +4,7 @@ page_title: Astro Themes
 weight: "2"
 meta_title: <themes> Astro Themes & Templates (Hand-picked) | Statichunt
 description: "Looking for the Astro themes? These Astro themes,starter and templates are ideal for any type of website, from businesses to personal blogs."
-icon: /images/icons/astro.svg
+icon: /images/icons/sensiseeds.ico
 website: https://sensiseeds.com/
 github_path: withastro/astro
 twitter_username: astrodotbuild
