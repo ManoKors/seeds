@@ -16,7 +16,7 @@ cms:
   - 
 category:
   - Saas
-  - Dashboard
+  - CBD
 draft: false
 weight: 6
 home_weight: 5
