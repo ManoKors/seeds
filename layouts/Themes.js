@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import ToolsIcon from "@/components/ToolsIcon";
 import { dateFormat } from "@/lib/utils/dateFormat";
 import { humanize, slugify } from "@/lib/utils/textConverter";
@@ -8,14 +9,22 @@ import InfiniteScroll from "react-infinite-scroll-component";
 
 // change github data by sort functionality
 const githubDataChange = (theme) => {
-  const getStar = theme.frontmatter.github_star ? theme.frontmatter.github_star : 0;
-  const star = getStar < 1000 ? getStar : parseFloat(getStar / 1000).toFixed(1) + "k";
+  const getStar = theme.frontmatter.github_star
+    ? theme.frontmatter.github_star
+    : 0;
+  const star =
+    getStar < 1000 ? getStar : parseFloat(getStar / 1000).toFixed(1) + "k";
 
-  const getFork = theme.frontmatter.github_fork ? theme.frontmatter.github_fork : 0;
-  const fork = getFork < 1000 ? getFork : parseFloat(getFork / 1000).toFixed(1) + "k";
+  const getFork = theme.frontmatter.github_fork
+    ? theme.frontmatter.github_fork
+    : 0;
+  const fork =
+    getFork < 1000 ? getFork : parseFloat(getFork / 1000).toFixed(1) + "k";
 
   const updateDate = dateFormat(
-    theme.frontmatter.update_date ? theme.frontmatter.update_date : theme.frontmatter.date,
+    theme.frontmatter.update_date
+      ? theme.frontmatter.update_date
+      : theme.frontmatter.date,
     "dd/MM/yy",
   );
   const price = theme.frontmatter.price ? theme.frontmatter.price : 0;
@@ -69,24 +78,24 @@ const Themes = ({ themes, authors, className }) => {
       className={`row !overflow-hidden px-2 py-4 ${className ? className : "sm:row-cols-2 xl:row-cols-3 2xl:row-cols-4 3xl:row-cols-5"}`}
     >
       {page.length > 0 ? (
-        <ul className="theme-list">
-          {page.map((theme) => (
-            <li key={theme.slug} className="theme-list-item">
-              <div className="theme-list-item-inner">
-                <Link href={`/themes/${theme.slug}`}>
-                  <img
-                    src={`images/thumbnails/${theme.slug}.png`}
-                    height={240}
-                    width={360}
-                    alt={`Screenshot of ${theme.frontmatter?.title}`}
-                    className="w-full rounded-t object-cover"
-                    onError={({ currentTarget }) => {
-                      currentTarget.onerror = null;
-                      currentTarget.src = "/images/theme-placeholder.png";
-                    }}
-                  />
-                </Link>
-                <div className="theme-card-body">
+        page.map((theme) => (
+          <div className="mb-8" key={theme.slug}>
+            <div className="theme-card">
+              <Link href={`/themes/${theme.slug}`}>
+                <img
+                  src={`images/thumbnails/${theme.slug}.png`}
+                  height={240}
+                  width={360}
+                  alt={`Screenshot of ${theme.frontmatter?.title}`}
+                  className="w-full rounded-t object-cover"
+                  onError={({ currentTarget }) => {
+                    currentTarget.onerror = null;
+                    currentTarget.src = "/images/theme-placeholder.png";
+                  }}
+                />
+              </Link>
+              <div className="theme-card-body">
+                <div className="flex justify-between">
                   <h4 className="h6 mb-0 text-lg font-medium">
                     <Link
                       href={`/themes/${theme.slug}`}
@@ -143,71 +152,71 @@ const Themes = ({ themes, authors, className }) => {
                         : "Free"
                       : githubDataChange(theme)}
                   </span>
-                  <span className="text-xs">
-                    by{" "}
-                    {authors
-                      .map((author) => author.slug)
-                      .includes(slugify(theme.frontmatter?.author)) ? (
-                      <Link
-                        href={`/authors/${slugify(theme.frontmatter?.author)}`}
-                        className={`${
-                          theme.frontmatter?.author === "Statichunt"
-                            ? "bg-gradient-to-r from-primary to-secondary bg-clip-text font-bold text-transparent"
-                            : "hover:underline"
-                        }`}
-                      >
-                        {theme.frontmatter?.author}
-                      </Link>
-                    ) : theme.frontmatter?.author ? (
-                      theme.frontmatter?.author
-                    ) : (
-                      theme.frontmatter?.github?.match(
-                        /github\.com\/([^\/]+)/,
-                        "",
-                      )[0]
-                    )}
-                  </span>
                 </div>
-                <div className="theme-card-footer">
-                  <div className="flex-wrap">
-                    <ToolsIcon item={theme} category={false} />
-                  </div>
-                  <div className="ml-auto flex items-center whitespace-nowrap">
+                <span className="text-xs">
+                  by{" "}
+                  {authors
+                    .map((author) => author.slug)
+                    .includes(slugify(theme.frontmatter?.author)) ? (
                     <Link
-                      href={`/demo/${theme.slug}`}
-                      className="btn btn-sm btn-demo svg-block mb-2 mr-1 leading-none"
-                      target="_blank"
-                      rel="noopener nofollow"
-                      data-tooltip="Preview"
-                      aria-label="Preview Theme"
-                    >
-                      <TbEye />
-                    </Link>
-                    <Link
-                      href={`${
-                        theme.frontmatter.github
-                          ? theme.frontmatter.github
-                          : theme.frontmatter.download
-                      }${theme.frontmatter.download?.includes("?ref=") ? "" : "?ref=statichunt.com"}`}
-                      className="btn btn-sm btn-download svg-align-bottom mb-2 pr-2 leading-none"
-                      target="_blank"
-                      rel={`noopener ${
-                        theme.frontmatter?.price ? "sponsor" : "nofollow"
+                      href={`/authors/${slugify(theme.frontmatter?.author)}`}
+                      className={`${
+                        theme.frontmatter?.author === "Statichunt"
+                          ? "bg-gradient-to-r from-primary to-secondary bg-clip-text font-bold text-transparent"
+                          : "hover:underline"
                       }`}
-                      data-tooltip="Download"
-                      aria-label="Download Theme"
                     >
-                      <>
-                        <span className="mr-1 hidden lg:inline">Get</span>
-                        <TbDownload />
-                      </>
+                      {theme.frontmatter?.author}
                     </Link>
-                  </div>
+                  ) : theme.frontmatter?.author ? (
+                    theme.frontmatter?.author
+                  ) : (
+                    theme.frontmatter?.github?.match(
+                      /github\.com\/([^\/]+)/,
+                      "",
+                    )[0]
+                  )}
+                </span>
+              </div>
+              <div className="theme-card-footer">
+                <div className="flex-wrap">
+                  <ToolsIcon item={theme} category={false} />
+                </div>
+                <div className="ml-auto flex items-center whitespace-nowrap">
+                  <Link
+                    href={`/demo/${theme.slug}`}
+                    className="btn btn-sm btn-demo svg-block mb-2 mr-1 leading-none"
+                    target="_blank"
+                    rel="noopener nofollow"
+                    data-tooltip="Preview"
+                    aria-label="Preview Theme"
+                  >
+                    <TbEye />
+                  </Link>
+                  <Link
+                    href={`${
+                      theme.frontmatter.github
+                        ? theme.frontmatter.github
+                        : theme.frontmatter.download
+                    }${theme.frontmatter.download?.includes("?ref=") ? "" : "?ref=statichunt.com"}`}
+                    className="btn btn-sm btn-download svg-align-bottom mb-2 pr-2 leading-none"
+                    target="_blank"
+                    rel={`noopener ${
+                      theme.frontmatter?.price ? "sponsor" : "nofollow"
+                    }`}
+                    data-tooltip="Download"
+                    aria-label="Download Theme"
+                  >
+                    <>
+                      <span className="mr-1 hidden lg:inline">Get</span>
+                      <TbDownload />
+                    </>
+                  </Link>
                 </div>
               </div>
-            </li>
-          ))}
-        </ul>
+            </div>
+          </div>
+        ))
       ) : (
         <h1>No Themes Found!</h1>
       )}
