@@ -9,7 +9,7 @@ date: 2023-02-13T00:00:00.000Z
 description: Flexy is built with Most Popular Framework React Material-UI.
 
 ssg:
-  - sensiseeds
+  - Sensi Seeds
 css:
   - MUI
 cms:
