@@ -12,7 +12,7 @@ ssg:
 css:
   - Bootstrap
 cms:
-
+  - CBD
 category:
   - Ecommerce
 draft: false
