@@ -40,7 +40,7 @@ const SingleTheme = ({ slug, theme }) => {
         description ? plainify(description) : plainify(content.slice(0, 120))
       }
       meta_title={plainify(meta_title)}
-      image={`/thumbnails/${slug}.png`}
+      image={`/images/thumbnails/${slug}.png`}
       noindex={noindex}
       canonical={canonical}
     >
