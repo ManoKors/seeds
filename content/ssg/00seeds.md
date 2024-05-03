@@ -2,8 +2,8 @@
 title: 00 Seeds
 page_title: Astro Themes
 weight: "2"
-meta_title: <themes> Astro Themes & Templates (Hand-picked) | Statichunt
-description: "Looking for the Astro themes? These Astro themes,starter and templates are ideal for any type of website, from businesses to personal blogs."
+meta_title: <themes> 00 Seeds cannabis seeds & strains (Hand-picked) | Statichunt
+description: "Auf der Suche nach 00 Seeds Cannabissamen? Diese 00 Seeds Cannabissamen, Sorten und Informationen are ideal for any type of website, from businesses to personal blogs."
 icon: /images/icons/breeder-icons/00seeds.png
 website: https://sensiseeds.com/
 github_path: withastro/astro
