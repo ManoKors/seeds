@@ -84,7 +84,7 @@ const Themes = ({ themes, authors, className }) => {
               <Link href={`/themes/${theme.slug}`}>
                 <img
                   src={`images/thumbnails/${theme.slug}.png`}
-                  height={360}
+                  height={240}
                   width={360}
                   alt={`Screenshot of ${theme.frontmatter?.title}`}
                   className="w-full rounded-t object-cover"
