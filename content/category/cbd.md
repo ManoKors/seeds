@@ -1,6 +1,6 @@
 ---
 title: "CBD"
-icon: /images/icons/cbd.svg
+icon: /images/icons/CBD.svg
 draft: false
 weight: 4
 ---
