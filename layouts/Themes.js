@@ -83,7 +83,7 @@ const Themes = ({ themes, authors, className }) => {
             <div className="theme-card">
               <Link href={`/themes/${theme.slug}`}>
                 <img
-                  src={`https://statichunt-images.netlify.app/themes/thumbnails/${theme.slug}.webp`}
+                  src={`images/thumbnails/${theme.slug}.png`}
                   height={240}
                   width={360}
                   alt={`Screenshot of ${theme.frontmatter?.title}`}
