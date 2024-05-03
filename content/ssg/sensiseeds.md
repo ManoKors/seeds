@@ -7,7 +7,7 @@ description: "Looking for the Astro themes? These Astro themes,starter and templ
 icon: /images/icons/breeder-icons/sensiseeds.ico
 website: https://sensiseeds.com/
 github_path: withastro/astro
-twitter_username: astrodotbuild
+twitter_username: SensiSeeds
 license: MIT
 license_url: https://github.com/withastro/astro/blob/main/LICENSE
 language: JavaScript
