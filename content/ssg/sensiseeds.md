@@ -1,5 +1,5 @@
 ---
-title: Sensi Seeds
+title: sensiseeds
 page_title: Astro Themes
 weight: "2"
 meta_title: <themes> Astro Themes & Templates (Hand-picked) | Statichunt
