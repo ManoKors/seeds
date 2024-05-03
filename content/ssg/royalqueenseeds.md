@@ -2,7 +2,7 @@
 title: Royal Queen Seeds
 page_title: Royal Queen Seeds
 weight: "2"
-meta_title: <themes> Astro Themes & Templates (Hand-picked) | Statichunt
+meta_title: <themes> Royal Queens Seeds Cannabissamen & Sorten hannd-picked) | Statichunt
 description: "Looking for the Astro themes? These Astro themes,starter and templates are ideal for any type of website, from businesses to personal blogs."
 icon: /images/icons/breeder-icons/royalqueenseeds.png
 website: https://www.royalqueenseeds.de/
