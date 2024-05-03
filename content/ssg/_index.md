@@ -1,5 +1,5 @@
 ---
-title: Static Site Generators
+title: Regular
 weight: 1
 noindex: true
 ---
